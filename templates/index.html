@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Software Development Life Cycle</title>
+</head>
+<body>
+<h1>Software Development Life Cycle</h1>
+<ul>
+{% for phase in phases %}
+<li><a href="{{ url_for('phase', phase_number=phase.phase) }}">Phase {{ phase.phase }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
