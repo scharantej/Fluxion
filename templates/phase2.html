@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Software Development Life Cycle - Phase 2</title>
+</head>
+<body>
+<h1>Software Development Life Cycle - Phase 2</h1>
+<ul>
+{% for task in tasks %}
+<li>{{ task.name }} - {{ task.description }}
+<a href="{{ url_for('delete_task', phase_number=phase_number, task_id=task.id) }}">Delete</a>
+<a href="{{ url_for('edit_task', phase_number=phase_number, task_id=task.id) }}">Edit</a>
+</li>
+{% endfor %}
+</ul>
+<br>
+<a href="{{ url_for('add_task', phase_number=phase_number) }}">Add Task</a>
+</body>
+</html>
+
+
